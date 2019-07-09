@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="A simple implementation of the state pattern.">
+    <Position X="8.604" Y="2.313" Height="0.542" Width="1.69" />
+  </Comment>
+  <Comment CommentText="View-model">
+    <Position X="4.206" Y="1.193" Height="0.39" Width="1.043" />
+  </Comment>
+  <Comment CommentText="Views">
+    <Position X="1.73" Y="6.489" Height="0.39" Width="1.043" />
+  </Comment>
+  <Comment CommentText="Model">
+    <Position X="3.135" Y="9.366" Height="0.39" Width="1.043" />
+  </Comment>
+  <Class Name="MetaClip.ViewModels.ViewModelBase">
+    <Position X="1.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAACAAAAAAIAAAAQAQgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MetaClip.ViewModels.ApplicationState">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAICAIAAAAAAAAAAAAoAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\ApplicationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.ViewModels.MetaclipApplication">
+    <Position X="11" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAAgAAAAIAQAAAAEABAAAAEQAAABAAAAAA=</HashCode>
+      <FileName>ViewModels\ApplicationState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MetaClip.ViewModels.Initialized" Collapsed="true">
+    <Position X="8.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\ApplicationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.ViewModels.LibraryMissing" Collapsed="true">
+    <Position X="6.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\ApplicationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.ViewModels.AddClip" Collapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAACCAAAAIACAACAAAAAMAAAAAAAgAAAIIAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AddClip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.Views.CategoryManager" Collapsed="true">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\CategoryManager.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.Views.LibrarySettings" Collapsed="true">
+    <Position X="2.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\LibrarySettings.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.Views.MainPanel" Collapsed="true">
+    <Position X="0.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\MainPanel.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.ViewModels.Initializing" Collapsed="true">
+    <Position X="6.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\ApplicationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.ViewModels.RestoringClip" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\ApplicationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.ViewModels.CategoryManager" Collapsed="true">
+    <Position X="4.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAABACAEGIAAAAMQAAAAAAgQBAAIhQEAAAAg=</HashCode>
+      <FileName>ViewModels\CategoryManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MetaClip.ViewModels.LibrarySettings" Collapsed="true">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAQAABAAAAAAkAEAAAAAAAgAAAAJAAgAAAEA=</HashCode>
+      <FileName>ViewModels\LibrarySettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.ViewModels.MainPanel" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEABGAAAAAIBCEFAIQgAAEQLAAAEAhQAAIIlQAAEAAA=</HashCode>
+      <FileName>ViewModels\MainPanel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MetaClip.Views.AddClip" Collapsed="true">
+    <Position X="2.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AddClip.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.Models.ClipLibrary" Collapsed="true">
+    <Position X="4" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAIAIKQAAAAAgAAAAICAAgUjAAQAgAIAAAAAA=</HashCode>
+      <FileName>Models\Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MetaClip.Models.ClipFile" Collapsed="true">
+    <Position X="2.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAACBAIAAAAAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

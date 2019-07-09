@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="MetaClip.Views.CategoryManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:MetaClip.ViewModels"
+             mc:Ignorable="d" Height="158" Width="312">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/MetaClip;component/Images/MetaclipBackSmall2.png" />
+    </UserControl.Background>
+    <UserControl.DataContext>
+        <vm:CategoryManager />
+    </UserControl.DataContext>
+    <Grid Height="159">
+        <Button Background="{x:Null}" Command="{Binding Path=CloseCommand}" Content="X" FontSize="10" FontWeight="Black" Margin="263,13,0,0" Name="button3" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="21" Foreground="WhiteSmoke" />
+        <TextBox Text="{Binding Path=NewCategory}" Height="23" HorizontalAlignment="Left" Margin="19,97,0,0" Name="textBox1" VerticalAlignment="Top" Width="177" Background="WhiteSmoke" FontFamily="Tahoma" FontSize="12" />
+        <Button Content="Set As Default Filter" Command="{Binding Path=SetDefaultCommand}" Height="23" HorizontalAlignment="Left" Margin="19,67,0,0" Name="button1" VerticalAlignment="Top" Width="132" Background="{x:Null}" FontFamily="Tahoma" FontSize="12" Foreground="WhiteSmoke" />
+        <Button Content="Add New" Command="{Binding Path=AddCommand}" Height="23" HorizontalAlignment="Left" Margin="199,97,0,0" Name="button2" VerticalAlignment="Top" Width="84" Background="{x:Null}" FontFamily="Tahoma" FontSize="12" Foreground="WhiteSmoke" />
+        <Button Background="{x:Null}" Content="Delete Category" Command="{Binding Path=DeleteCommand}" Height="23" HorizontalAlignment="Right" Margin="0,67,29,0" Name="button4" VerticalAlignment="Top" Width="130" FontFamily="Tahoma" FontSize="12" Foreground="WhiteSmoke" />
+        <ComboBox ItemsSource="{Binding Path=CategoryList}" SelectedItem="{Binding Path=SelectedCategory}" Height="23" HorizontalAlignment="Left" Margin="19,38,0,0" Name="comboBox1" VerticalAlignment="Top" Width="264" Background="{x:Null}" FontFamily="Tahoma" FontSize="12" Foreground="Black" />
+    </Grid>
+</UserControl>

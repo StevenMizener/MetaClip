@@ -1,0 +1,10 @@
+﻿<Window x:Class="MetaClip.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism"
+        Title="Shell" WindowStyle="None" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="{x:Null}" Foreground="{x:Null}" AllowsTransparency="True" OverridesDefaultStyle="False" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="MainRegion">
+        </ContentControl> 
+    </Grid>
+</Window>

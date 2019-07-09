@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MetaClip.Views.AddClip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:MetaClip.ViewModels"
+             mc:Ignorable="d" Height="179" Width="275">
+    <UserControl.Background>
+        <ImageBrush ImageSource="/MetaClip;component/Images/MetaclipBackSmall2.png" />
+    </UserControl.Background>
+    <UserControl.DataContext>
+        <vm:AddClip />
+    </UserControl.DataContext>
+    <Grid Width="276" Height="180">        
+        <TextBox Margin="19,43,0,0" Text="{Binding Path=ClipName}" Name="textBox1" HorizontalAlignment="Left" Width="228" Background="WhiteSmoke" FontFamily="Tahoma" FontSize="12" Height="23" VerticalAlignment="Top" />
+        <ComboBox ItemsSource="{Binding Path=CategoryList}" SelectedItem="{Binding Path=SelectedCategory}" Height="23" HorizontalAlignment="Left" Margin="19,89,0,0" Name="comboBox1" VerticalAlignment="Top" Width="181" Background="{x:Null}" FontSize="12" FontFamily="Tahoma" IsEditable="False" />
+        <Label Content="Clip Name:" Height="27" Margin="18,0,29,134" Name="label1" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" FontStyle="Normal" FontFamily="Tahoma" FontSize="12" Foreground="WhiteSmoke" />
+        <Label Content="Assign to Category:" Height="26" Margin="18,65,29,0" Name="label2" VerticalAlignment="Top" FontSize="12" FontFamily="Tahoma" Foreground="WhiteSmoke" />
+        <Button Command="{Binding Path=CloseCommand}" Content="X" FontSize="10" FontWeight="Black" Margin="236,15,24,145" Name="button3" Background="{x:Null}" Foreground="WhiteSmoke"></Button>
+        <Button Command="{Binding Path=AddCommand}" Content="Store Clip" Height="23" Margin="19,118,139,0" Name="button1" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="12" Background="{x:Null}" Foreground="WhiteSmoke"></Button>
+        <Button Command="{Binding Path=CloseCommand}" Content="Cancel" Height="23" Margin="0,118,29,0" Name="button2" VerticalAlignment="Top" FontFamily="Tahoma" FontSize="12" HorizontalAlignment="Right" Width="108" Background="{x:Null}" Foreground="WhiteSmoke"></Button>
+        <Button Command="{Binding Path=NewCommand}" Content="New" Height="24" HorizontalAlignment="Left" Margin="204,89,0,0" Name="button4" VerticalAlignment="Top" Width="43" FontFamily="Tahoma" FontSize="12" Background="{x:Null}" Foreground="WhiteSmoke"/>
+        <Grid.Background>
+            <ImageBrush />
+        </Grid.Background>
+    </Grid>
+</UserControl>

@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="MetaClip.Views.MainPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:prism="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism"
+             mc:Ignorable="d" xmlns:vm="clr-namespace:MetaClip.ViewModels" Foreground="#FFEFDFDF" IsManipulationEnabled="True" Focusable="True" FontFamily="HardRock" Height="298" Width="239">
+    <UserControl.DataContext>
+        <vm:MainPanel />
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <Style x:Key="MenuText">
+            <Setter Property="TextElement.FontFamily" Value="/MetaClip;component/Resources/#Tall Dark and Handsome" />
+            <Setter Property="TextElement.FontSize" Value="26"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Height="298" Width="237" UseLayoutRounding="True">
+        <Grid.Background>
+            <ImageBrush ImageSource="/MetaClip;component/Images/MetaclipBack2.png" />
+        </Grid.Background>        
+        <ComboBox ItemsSource="{Binding Path=CategoryList}" Margin="17,67,26,0" Name="comboBox1" SelectedValue="0" SelectedItem="{Binding Path=SelectedCategory}" Foreground="Black" FontWeight="Bold" FontSize="14" SelectedIndex="0" FontFamily="Arial" Height="24" VerticalAlignment="Top" Background="#FFC0C5CB"></ComboBox>
+        <ListBox ItemsSource="{Binding Path=ClipFiles}" SelectedItem="{Binding Path=SelectedClip}" Margin="17,89.5,26,39.93" Name="listBox1" FontSize="14" Background="WhiteSmoke" FontStretch="Normal" FontWeight="Normal" OpacityMask="#FFC7C7BB" UseLayoutRounding="False" IsSynchronizedWithCurrentItem="True" BorderBrush="#E6726464" FontFamily="Arial">
+            <ListBox.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Restore" Command="{Binding Path=RestoreCommand}" />
+                    <MenuItem Header="Delete" Command="{Binding Path=DeleteCommand}"/>
+                </ContextMenu>
+            </ListBox.ContextMenu>
+        </ListBox>
+       
+        <Menu Name="menu1" Foreground="#FF9D8D8D" Margin="1,30,7,234" Padding="5,6,0,0" BorderBrush="{x:Null}" BorderThickness="0,2" VerticalContentAlignment="Center" HorizontalAlignment="Center" Width="229" HorizontalContentAlignment="Center" FlowDirection="LeftToRight" FontStretch="Normal" UseLayoutRounding="True" VerticalAlignment="Center" Height="34">
+            <MenuItem FontWeight="Normal" Foreground="Black" HorizontalAlignment="Center" Margin="0,0,0,0" Style="{DynamicResource MenuText}" Command="{Binding Path=SaveCommand}" VerticalAlignment="Bottom">
+                <MenuItem.Header>
+                    <TextBlock HorizontalAlignment="Center">Capture</TextBlock>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem Command="{Binding Path=RestoreCommand}" HorizontalAlignment="Center" FontWeight="Normal" Margin="0,0,0,0" Foreground="Black" Style="{DynamicResource MenuText}" VerticalAlignment="Bottom">
+                <MenuItem.Header>
+                    <TextBlock HorizontalAlignment="Center">Restore</TextBlock>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem FontWeight="Normal" Margin="0,0,0,0" HorizontalAlignment="Center" Foreground="Black" Style="{DynamicResource MenuText}" VerticalAlignment="Bottom">
+                <MenuItem.Header>
+                    <TextBlock HorizontalAlignment="Center">Options</TextBlock>
+                </MenuItem.Header>
+                <MenuItem Command="{Binding Path=SubmitCommand}">
+                    <MenuItem.Header>
+                        <TextBlock>Library Settings</TextBlock>
+                    </MenuItem.Header>
+                </MenuItem>
+                <MenuItem Command="{Binding Path=LaunchCatMgrCommand}">
+                    <MenuItem.Header>
+                        <TextBlock>Categorization Options</TextBlock>
+                    </MenuItem.Header>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem HorizontalAlignment="Center" Command="{Binding Path=CloseCommand}" Margin="0,0,0,0" FontWeight="Normal" Foreground="Black" Style="{DynamicResource MenuText}" VerticalAlignment="Bottom">
+                <MenuItem.Header>
+                    <TextBlock HorizontalAlignment="Center">Exit</TextBlock>
+                </MenuItem.Header>
+            </MenuItem>
+            <Menu.Background>
+                <ImageBrush ImageSource="/MetaClip;component/Images/MenuBar.png" />
+            </Menu.Background>
+        </Menu>
+    </Grid>
+</UserControl>
